@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>运营管理平台</title> 
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <script type="text/javascript" src="../../resources/js/css.js"></script>
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini padding0" style="overflow: hidden;">
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="/dms" class="logo" target="_top">
+                <span class="logo-mini"><b>运营管理</b></span>
+                <span class="logo-lg"><b>运营管理平台</b></span>
+            </a>
+            <nav class="navbar navbar-static-top">
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="javascript:void(0);" target="_top">
+                                <i class="fa fa-sitemap"></i> <span id="orgText"></span>
+                            </a>
+                            <div id="orgTree" class="dropdown-topnav hide"></div>
+                        </li>
+                        <li class="dropdown user user-menu">
+                            <a id="loginOut">
+                                <i class="fa fa-user"></i>
+                                <span class="hidden-xs">退出</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <aside class="main-sidebar">
+            <ul class="sidebar-menu" id="sidebarMenu">  
+            </ul>
+        </aside>
+        <!-- Content Wrapper. Contains page content -->
+        <div id="content" class="content-wrapper">
+            <iframe src="main.html" width="100%" height="100%" name="mainFrame" scrolling="no" frameborder="0"></iframe>
+        </div>
+        <div class="control-sidebar-bg"></div>
+    </div>
+    <!-- ./wrapper -->
+    <script type="text/javascript" src="../../resources/js/script.js"></script> 
+    <script type="text/javascript" src="js/index.js"></script>  
+    <script type="text/javascript" src="js/menu.js"></script> 
+</body>
+
+</html>

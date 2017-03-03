@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>运营管理平台</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <script type="text/javascript" src="../../resources/js/css.js"></script>
+    <style type="text/css">
+    .box-cus textarea.form-control {
+        height: 28px;
+    }
+    
+    .fa-plus-circle {
+        font-size: 20px;
+        color: #9c9c9c;
+    }
+    
+    #excelForm .file-btn {
+        width: 150px;
+    }
+    </style>
+</head>
+
+<body>
+    <section class="content-header">
+        <h1>
+        批量添加
+      </h1>
+    </section>
+    <div class="box box-cus box-cus-form">
+        <div class="box-body">
+            <form id="excelForm">
+                <span class="btn btn-warning file-btn">
+                    <i class="fa fa-file-excel-o"></i> Excel批量上传
+                    <input type="file" name="goodsFile" accept="application/vnd.ms-excel" onchange="uploadExcel(this)">
+                </span>
+                <input type="hidden" name="channelId" value="pj_9999">
+            </form>
+            <form id="uploadForm" class="table-cus-box multidepot-module">
+                <table class="table table-bordered table-hover" style="width: 100%; margin-top: 10px;">
+                    <thead>
+                        <tr>
+                            <th style="width: 30px;">
+                                <input type="checkbox">
+                            </th>
+                            <th>商品名称</th>
+                            <th style="width: 100px;">市场价格</th>
+                            <th>商品简介</th>
+                            <th>使用说明</th>
+                            <th>商品属性</th>
+                            <th style="width: 250px;">商品图片(最多五张)</th>
+                            <th style="width: 250px;">图片详情(最多五张)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+                        <tr class="hide">
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                    <input class="form-control" type="text" name="goodsName" required>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                    <input class="form-control" type="text" name="marketPrice" required>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                    <textarea class="form-control" name="goodsDescrible" required></textarea>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                    <textarea class="form-control" name="instruction" required></textarea>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                    <select class="form-control" name="goodsProperty">
+                                        <option value="1">实体商品</option>
+                                        <option value="0">虚拟商品</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="uploadfile-box no-img clearfix form-group">
+                                    <div class="img-box"></div>
+                                    <input type="hidden" data-name="goodsImg">
+                                    <span class="file-btn">
+                                             <i class="fa fa-plus-circle"></i> 
+                                            <input type="file" accept="image/*" multiple="multiple" name="goodsImg" onchange="renderUploadImg(this)">
+                                        </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="uploadfile-box no-img clearfix form-group">
+                                    <div class="img-box"></div>
+                                    <input type="hidden" data-name="goodsDetailImg">
+                                    <span class="file-btn">
+                                         <i class="fa fa-plus-circle"></i> 
+                                        <input type="file" accept="image/*" multiple="multiple" name="goodsImg" onchange="renderUploadImg(this)">
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="8"> <a class="btn btn-info" onclick="addOne( this )"><i class="fa fa-plus"></i> 新增一件商品</a> <a class="btn btn-danger" onclick="removeTr()"><i class="fa fa-remove"></i> 删除</a> </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </form>
+        </div>
+        <div class="box-footer clearfix text-center">
+            <button type="button" class="btn btn-primary" id="submit"><i class="fa fa-save"></i> 提交</button>
+            <a href="#" onClick="javascript :history.back(-1)" class="btn btn-default"><i class="fa fa-arrow-left"></i> 返回</a>
+        </div>
+        <!-- /.box-body -->
+    </div>
+    <script type="text/javascript" src="../../resources/js/script.js"></script>
+    <script src="js/addMultiDepot.js"></script>
+</body>
+
+</html>
